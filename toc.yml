@@ -1,4 +1,6 @@
+- name: Contenta
+  href: index.md
 - name: Articles
   href: articles/
-- name: Contenta APIs
+- name: API
   href: apiconcepts/
