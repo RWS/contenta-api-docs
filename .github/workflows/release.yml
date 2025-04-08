@@ -21,8 +21,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      ProductName: contenta
-      ProductNameWithEdition: 'contenta 2021'
+      ProductName: Contenta
+      ProductNameWithEdition: 'Contenta 2021'
       AppSigningEmail : app-signing@sdl.com
       DotNetVersion: '.Net Framework 4.8'
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -33,11 +33,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: install docfx
         run: |
-          choco install docfx
-          docfx init -q
-          
+          dotnet tool install -g docfx
+
       - name: build _site
-        run: docfx.exe
+        run: docfx.exe build docfx.json
 
       # Runs a set of commands using the runners shell
       #- name: commit to gh-pages
